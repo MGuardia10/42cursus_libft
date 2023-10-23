@@ -32,7 +32,16 @@ FILES	= ft_isalpha.c \
 		  ft_putchar_fd.c \
 		  ft_putstr_fd.c \
 		  ft_putendl_fd.c \
-		  ft_putnbr_fd.c
+		  ft_putnbr_fd.c \
+		  get_next_line.c \
+		  get_next_line_utils.c \
+		  ft_printf.c \
+		  ft_putchar.c \
+		  ft_putstr.c \
+		  ft_putnbr.c \
+		  ft_printhexa.c \
+		  ft_printpointer.c \
+		  ft_print_error.c
 B_FILES	= 	ft_lstnew_bonus.c \
 			ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c \
@@ -48,15 +57,18 @@ CC		= gcc
 FLAGS	= -Wall -Werror -Wextra
 RM		= rm -f
 
+all:		${NAME}
+
 ${NAME}:
 					${CC} -c ${FLAGS} ${FILES} -I ./
 					ar rc ${NAME} ${OBJS}
 
-all:		${NAME}
-
 bonus:		${NAME}
 					${CC} ${FLAGS} -c ${B_FILES} -I ./
 					ar rc ${NAME} ${B_OBJS}
+
+%.o: %.c
+					${CC} ${FLAGS} -c -o $@ $<
 
 clean:
 					${RM} ${OBJS} ${B_OBJS}

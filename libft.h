@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:55:30 by mguardia          #+#    #+#             */
-/*   Updated: 2023/09/19 14:50:35 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/23 15:59:31 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 # define LIBFT_H
 # include <unistd.h>
 # include <stdlib.h>
+# include <stdarg.h>
+# include <limits.h>
+# include <signal.h>
+# include <stdio.h>
+# include <fcntl.h>
 
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+# define STDERR 2
 
+// LIBFT - OBLIGATORY PART
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -55,6 +57,14 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+// LIBFT - BONUS
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 t_list	*ft_lstnew(void *content);
 void	ft_lstadd_front(t_list **lst, t_list *new);
 int		ft_lstsize(t_list *lst);
@@ -64,5 +74,41 @@ void	ft_lstdelone(t_list *lst, void (*del)(void *));
 void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+
+// PRINTF FUNCTION
+int	ft_printf(char const *str, ...);
+int	format_printf(char c, va_list ap);
+int	ft_putchar(char c);
+int	ft_putstr(char *str);
+int	ft_putnbr(int n);
+int	ft_putnbrunsigned(unsigned int n);
+int	ft_printhexa(unsigned int num, int flag);
+int	ft_printhexalong(unsigned long num);
+int	ft_printpointer(void *ptr);
+
+// GET NEXT LINE FUNCTION
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 10
+# endif
+
+typedef struct s_gnl
+{
+	char			*str_buf;
+	struct s_gnl	*next;
+}					t_gnl;
+
+char	*get_next_line(int fd);
+void	ft_lstclear_gnl(t_gnl **lst, void (*del)(void *));
+int		init_list(t_gnl **list, int fd);
+int		find_new_line(t_gnl *list);
+void	fill_list(t_gnl **list, char *str);
+int		count_chars(t_gnl *list);
+void	my_strcpy(char *str, t_gnl *list);
+void	clean_list(t_gnl **list);
+t_gnl	*ft_lstlast_gnl(t_gnl *lst);
+void	clear_mem(t_gnl **list, t_gnl *rest_node, char *str);
+
+// OTHER UTIL FUNCTIONS
+void	ft_print_error(char *error);
 
 #endif
