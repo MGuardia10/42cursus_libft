@@ -6,12 +6,22 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:24:52 by mguardia          #+#    #+#             */
-/*   Updated: 2023/09/15 16:29:43 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:33:11 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * The function `ft_strtrim` trims the characters specified in the `set` parameter from the beginning
+ * and end of the string `s1`.
+ * 
+ * @param s1 The parameter `s1` is a pointer to a string that you want to trim.
+ * @param set The "set" parameter is a string that contains a set of characters that we want to remove
+ * from the beginning and end of the "s1" string.
+ * 
+ * @return a trimmed version of the input string `s1`.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	s1_len;

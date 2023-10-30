@@ -6,12 +6,24 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 12:00:30 by mguardia          #+#    #+#             */
-/*   Updated: 2023/09/19 19:03:37 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:33:21 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * The function `ft_substr` takes a string `s`, a starting index `start`, and a length `len`, and
+ * returns a newly allocated substring of `s` starting at `start` with a length of `len`.
+ * 
+ * @param s A pointer to a constant character string (input string).
+ * @param start The start parameter is the index at which to start extracting the substring from the
+ * input string.
+ * @param len The parameter "len" represents the length of the substring that you want to extract from
+ * the string "s".
+ * 
+ * @return a pointer to a newly allocated substring of the input string 's'.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t			slen;

@@ -6,12 +6,21 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 20:18:42 by mguardia          #+#    #+#             */
-/*   Updated: 2023/09/14 17:55:30 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:30:56 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+/**
+ * The function `ft_strdup` takes a string as input and returns a dynamically allocated copy of that
+ * string.
+ * 
+ * @param s1 s1 is a pointer to a character array (string) that we want to duplicate.
+ * 
+ * @return a pointer to a newly allocated memory block that contains a duplicate of the input string
+ * `s1`.
+ */
 char	*ft_strdup(char *s1)
 {
 	char	*dst;

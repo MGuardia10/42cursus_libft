@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:23:36 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/23 13:21:23 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:29:09 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,14 @@ int	format_printf(char c, va_list ap)
 	return (0);
 }
 
+/**
+ * The ft_printf function takes a string and a variable number of arguments, and prints formatted
+ * output based on the format specifiers in the string.
+ * 
+ * @param str A pointer to a string that contains the format specifier and the text to be printed.
+ * 
+ * @return an integer value, which represents the number of characters printed.
+ */
 int	ft_printf(char const *str, ...)
 {
 	va_list	ap;

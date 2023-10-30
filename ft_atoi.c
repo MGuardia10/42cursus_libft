@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:50:41 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/05 11:55:36 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/10/30 20:23:45 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,14 @@ static int	is_sign(char c)
 	return (0);
 }
 
+/**
+ * The ft_atoi function converts a string representation of an integer to an actual integer value.
+ * 
+ * @param str The parameter `str` is a pointer to a character array, which represents the string that
+ * we want to convert to an integer.
+ * 
+ * @return the converted integer value of the input string.
+ */
 int	ft_atoi(const char *str)
 {
 	long long	result;
