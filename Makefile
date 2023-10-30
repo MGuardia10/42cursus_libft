@@ -1,4 +1,7 @@
+# NAME LIBFT
 NAME	= libft.a
+
+# SOURCE FILES
 FILES	= ft_isalpha.c \
 		  ft_isdigit.c \
 		  ft_isalnum.c \
@@ -41,41 +44,41 @@ FILES	= ft_isalpha.c \
 		  ft_putnbr.c \
 		  ft_printhexa.c \
 		  ft_printpointer.c \
-		  ft_print_error.c
-B_FILES	= 	ft_lstnew_bonus.c \
-			ft_lstadd_front_bonus.c \
-			ft_lstsize_bonus.c \
-			ft_lstlast_bonus.c \
-			ft_lstadd_back_bonus.c \
-			ft_lstdelone_bonus.c \
-			ft_lstclear_bonus.c \
-			ft_lstiter_bonus.c \
-			ft_lstmap_bonus.c
+		  ft_print_error.c \
+		  ft_lstnew_bonus.c \
+		  ft_lstadd_front_bonus.c \
+		  ft_lstsize_bonus.c \
+		  ft_lstlast_bonus.c \
+		  ft_lstadd_back_bonus.c \
+		  ft_lstdelone_bonus.c \
+		  ft_lstclear_bonus.c \
+		  ft_lstiter_bonus.c \
+		  ft_lstmap_bonus.c
+
+# OBJECT FILES
 OBJS	= ${FILES:.c=.o}
-B_OBJS	= ${B_FILES:.c=.o}
+
+# COMPILER OPTIONS
 CC		= gcc
 FLAGS	= -Wall -Werror -Wextra
 RM		= rm -f
+INCLUDE = -I ./
 
-all:		${NAME}
+all:		$(NAME)
 
-${NAME}:
-					${CC} -c ${FLAGS} ${FILES} -I ./
-					ar rc ${NAME} ${OBJS}
-
-bonus:		${NAME}
-					${CC} ${FLAGS} -c ${B_FILES} -I ./
-					ar rc ${NAME} ${B_OBJS}
+$(NAME):
+		$(CC) -c $(FLAGS) $(FILES) $(INCLUDE)
+					ar rc $(NAME) $(OBJS)
 
 %.o: %.c
-					${CC} ${FLAGS} -c -o $@ $<
+		${CC} ${FLAGS} -c -o $@ $<
 
 clean:
-					${RM} ${OBJS} ${B_OBJS}
+		$(RM) $(OBJS)
 
 fclean:		clean
-					${RM} ${NAME}
+		$(RM) $(NAME)
 
-re:			fclean all
+re:		fclean all
 
-.PHONY:		all  bonus clean fclean re
+.PHONY:		all clean fclean re
