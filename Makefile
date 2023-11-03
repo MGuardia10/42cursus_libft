@@ -44,7 +44,8 @@ FILES	= ft_isalpha.c \
 		  ft_putnbr.c \
 		  ft_printhexa.c \
 		  ft_printpointer.c \
-		  ft_print_error.c \
+		  ft_error.c \
+		  ft_custom_error.c \
 		  ft_lstnew_bonus.c \
 		  ft_lstadd_front_bonus.c \
 		  ft_lstsize_bonus.c \
@@ -56,7 +57,7 @@ FILES	= ft_isalpha.c \
 		  ft_lstmap_bonus.c
 
 # OBJECT FILES
-OBJS	= ${FILES:.c=.o}
+OBJS	= $(FILES:.c=.o)
 
 # COMPILER OPTIONS
 CC		= gcc
