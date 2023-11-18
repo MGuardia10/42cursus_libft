@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_free_matrix.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/18 20:18:50 by mguardia          #+#    #+#             */
-/*   Updated: 2023/11/18 11:24:59 by mguardia         ###   ########.fr       */
+/*   Created: 2023/11/06 12:52:12 by mguardia          #+#    #+#             */
+/*   Updated: 2023/11/18 11:18:17 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * `ft_lstlast` function returns a pointer to the last element of a linked list.
+ * The function `ft_free_matrix` frees the memory allocated for a matrix of
+ * strings.
  * 
- * @param lst The parameter "lst" is a pointer to the first node of the list.
- * 
- * @return a pointer to the last node in the linked list.
+ * @param p The parameter `p` is a pointer to a pointer to a character, which
+ * represents a matrix or a 2D array of characters.
  */
-t_list	*ft_lstlast(t_list *lst)
+void	ft_free_matrix(char **p)
 {
-	t_list	*aux;
+	int	i;
 
-	aux = lst;
-	while (lst != NULL)
+	i = 0;
+	while (p[i])
 	{
-		aux = lst;
-		lst = lst->next;
+		free(p[i]);
+		i++;
 	}
-	return (aux);
+	free(p);
 }

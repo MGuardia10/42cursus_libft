@@ -54,7 +54,9 @@ FILES	= ft_isalpha.c \
 		  ft_lstdelone_bonus.c \
 		  ft_lstclear_bonus.c \
 		  ft_lstiter_bonus.c \
-		  ft_lstmap_bonus.c
+		  ft_lstmap_bonus.c \
+		  ft_free_matrix.c \
+		  ft_strcmp.c
 
 # OBJECT FILES
 OBJS	= $(FILES:.c=.o)

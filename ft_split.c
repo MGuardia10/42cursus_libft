@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 17:25:14 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/30 20:30:35 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:36:40 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,14 +89,15 @@ static char	**split_words(char const *s, char c, char **split, int words)
 }
 
 /**
- * The function `ft_split` takes a string `s` and a character `c` as input, and splits the string into
- * an array of substrings based on the delimiter `c`.
+ * The function `ft_split` takes a string `s` and a character `c` as input,
+ * and splits `s` into an array of substrings based on the delimiter `c`.
  * 
  * @param s A pointer to a string that needs to be split into words.
- * @param c The parameter `c` is a character that is used as a delimiter to split the string `s` into
- * multiple words.
+ * @param c The parameter `c` is a character that is used as a delimiter to
+ * split the string `s` into multiple words.
  * 
- * @return The function `ft_split` is returning a pointer to a pointer of characters (`char **`).
+ * @return The function `ft_split` is returning a pointer to a pointer of
+ * characters (`char **`).
  */
 char	**ft_split(char const *s, char c)
 {

@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 12:22:33 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/30 20:26:38 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:21:39 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
  * The function `ft_lstadd_back` adds a new element to the end of a linked list.
  * 
  * @param lst A pointer to a pointer to the first element of a linked list.
- * @param new The "new" parameter is a pointer to a t_list structure that represents the new node to be
- * added to the end of the list.
+ * @param new The "new" parameter is a pointer to a t_list structure that
+ * represents the new node to be added to the end of the list.
  * 
  * @return The function does not explicitly return a value.
  */

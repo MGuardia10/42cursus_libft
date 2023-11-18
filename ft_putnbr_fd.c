@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:48:01 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/30 20:29:54 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:34:22 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
  * The function `ft_putnbr_fd` prints an integer to a file descriptor.
  * 
  * @param n The number to be printed.
- * @param fd The parameter `fd` represents the file descriptor of the file where the output will be
- * written. It is an integer value that specifies the file or stream to which the output will be
- * directed.
+ * @param fd The parameter `fd` represents the file descriptor of the file
+ * where the output will be written. It is an integer value that specifies the
+ * file or stream to which the output will be directed.
  */
 void	ft_putnbr_fd(int n, int fd)
 {

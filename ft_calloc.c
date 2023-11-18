@@ -6,18 +6,21 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 21:03:46 by mguardia          #+#    #+#             */
-/*   Updated: 2023/10/30 20:24:34 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/11/18 11:16:35 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /**
- * The ft_calloc function allocates memory for an array and initializes it to zero.
+ * The ft_calloc function allocates memory for an array and initializes it
+ * to zero.
  * 
- * @param count The count parameter represents the number of elements you want to allocate memory for.
- * It specifies how many elements of size bytes each you want to allocate memory for.
- * @param size The size parameter represents the size in bytes of each element in the array.
+ * @param count The count parameter represents the number of elements you want
+ * to allocate memory for. It specifies how many elements of size bytes each
+ * you want to allocate memory for.
+ * @param size The size parameter represents the size in bytes of each element
+ * in the array.
  * 
  * @return a pointer to the allocated memory block.
  */
