@@ -19,7 +19,7 @@ You can see the subject [**HERE**](https://github.com/MGuardia10/42cursus/blob/m
 	make clean
 4- Include the libft header on your files and compile with the `libft.a` file.
 ```C
-#include "libft.h"
+#include "includes/libft.h"
 
 int main(void)
 {
