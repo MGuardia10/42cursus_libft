@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:55:30 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/05 14:52:16 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/12/12 17:19:52 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,8 @@ char		**ft_split(char const *s, char c);
 char		*ft_itoa(int n);
 char		*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void		ft_striteri(char *s, void (*f)(unsigned int, char *));
+int			ft_putchar(char c);
+int			ft_putstr(char *str);
 void		ft_putchar_fd(char c, int fd);
 void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
@@ -84,14 +86,13 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 // PRINTF FUNCTION
 int			ft_printf(char const *str, ...);
-int			format_printf(char c, va_list ap);
-int			ft_putchar(char c);
-int			ft_putstr(char *str);
-int			ft_putnbr(int n);
-int			ft_putnbrunsigned(unsigned int n);
-int			ft_printhexa(unsigned int num, int flag);
-int			ft_printhexalong(unsigned long num);
-int			ft_printpointer(void *ptr);
+void		ft_putchar_c(char c, int *count);
+void		ft_putstr_c(char *str, int *count);
+void		ft_putnbr_base(long long int n, int base_len, int *count, \
+													char *base);
+void		ft_putunsignednbr_base(unsigned long n, size_t b_len, int *count, \
+													char *base);
+void		ft_printpointer(void *ptr, int *count);
 
 // GET NEXT LINE FUNCTION
 # ifndef BUFFER_SIZE

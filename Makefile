@@ -40,11 +40,9 @@ SRC_FILES	=	ft_isalpha.c \
 				get_next_line.c \
 				get_next_line_utils.c \
 				ft_printf.c \
+				ft_printf_utils.c \
 				ft_putchar.c \
 				ft_putstr.c \
-				ft_putnbr.c \
-				ft_printhexa.c \
-				ft_printpointer.c \
 				ft_error.c \
 				ft_custom_error.c \
 				ft_free_matrix.c \
