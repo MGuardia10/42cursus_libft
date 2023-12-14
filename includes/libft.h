@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:55:30 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/14 15:42:34 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/12/14 16:32:39 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void		ft_printpointer(void *ptr, int *count);
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
 # endif
-	
+
 char		*get_next_line(int fd);
 
 // OTHER UTIL FUNCTIONS
