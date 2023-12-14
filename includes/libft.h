@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:55:30 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/12 17:19:52 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/12/14 15:42:34 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,23 +98,8 @@ void		ft_printpointer(void *ptr, int *count);
 # ifndef BUFFER_SIZE
 #  define BUFFER_SIZE 10
 # endif
-
-typedef struct s_gnl
-{
-	char			*str_buf;
-	struct s_gnl	*next;
-}					t_gnl;
-
+	
 char		*get_next_line(int fd);
-void		ft_lstclear_gnl(t_gnl **lst, void (*del)(void *));
-int			init_list(t_gnl **list, int fd);
-int			find_new_line(t_gnl *list);
-void		fill_list(t_gnl **list, char *str);
-int			count_chars(t_gnl *list);
-void		my_strcpy(char *str, t_gnl *list);
-void		clean_list(t_gnl **list);
-t_gnl		*ft_lstlast_gnl(t_gnl *lst);
-void		clear_mem(t_gnl **list, t_gnl *rest_node, char *str);
 
 // OTHER UTIL FUNCTIONS
 void		ft_custom_error(char *error);

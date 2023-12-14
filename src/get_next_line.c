@@ -6,84 +6,78 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:50:39 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:13:57 by mguardia         ###   ########.fr       */
+/*   Updated: 2023/12/14 16:25:29 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/libft.h"
 
-t_gnl	*ft_lstlast_gnl(t_gnl *lst)
+size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
 {
-	t_gnl	*aux;
+	size_t	srcsize;
+	size_t	i;
 
-	aux = lst;
-	while (lst != NULL)
-	{
-		aux = lst;
-		lst = lst->next;
-	}
-	return (aux);
-}
-
-void	ft_lstclear_gnl(t_gnl **lst, void (*del)(void *))
-{
-	if (!lst || !del || !(*lst))
-		return ;
-	ft_lstclear_gnl(&(*lst)->next, del);
-	del((*lst)->str_buf);
-	free(*lst);
-	*lst = NULL;
-}
-
-int	init_list(t_gnl **list, int fd)
-{
-	char	*str;
-	int		read_bytes;
-
-	while (!find_new_line(*list))
-	{
-		str = malloc(BUFFER_SIZE + 1);
-		if (!str)
-			return (1);
-		read_bytes = read(fd, str, BUFFER_SIZE);
-		if (read_bytes < 1)
-		{
-			free(str);
-			return (0);
-		}
-		str[read_bytes] = '\0';
-		fill_list(list, str);
-	}
-	return (0);
-}
-
-void	clean_list(t_gnl **list)
-{
-	t_gnl	*last_node;
-	t_gnl	*rest_node;
-	char	*str;
-	int		i;
-	int		j;
-
-	rest_node = malloc(sizeof(t_gnl));
-	str = malloc(BUFFER_SIZE + 1);
-	if (!str || !rest_node)
-	{
-		free(rest_node);
-		free(str);
-		return (ft_lstclear_gnl(list, free));
-	}
-	last_node = ft_lstlast_gnl(*list);
+	srcsize = ft_strlen(src);
 	i = 0;
-	j = 0;
-	while (last_node->str_buf[i] && last_node->str_buf[i] != '\n')
-		i++;
-	while (last_node->str_buf[i] && last_node->str_buf[++i])
-		str[j++] = last_node->str_buf[i];
-	str[j] = '\0';
-	rest_node->str_buf = str;
-	rest_node->next = NULL;
-	clear_mem(list, rest_node, str);
+	if (dstsize > 0)
+	{
+		while (i < srcsize && i < dstsize - 1)
+		{
+			dst[i] = src[i];
+			i++;
+		}
+		dst[i] = '\0';
+	}
+	return (srcsize);
+}
+
+char	*ft_strdup_gnl(const char *src)
+{
+	char	*dst;
+	size_t	len;
+
+	len = ft_strlen(src) + 1;
+	dst = malloc(len);
+	if (dst == NULL)
+		return (NULL);
+	ft_strlcpy_gnl(dst, src, len);
+	return (dst);
+}
+
+char	*ft_strjoin_gnl(char *s1, char const *s2, size_t len)
+{
+	size_t	s1_len;
+	size_t	s2_len;
+	char	*join;
+
+	if (!s1 || !s2)
+		return (NULL);
+	s1_len = ft_strlen(s1);
+	s2_len = len;
+	join = (char *)malloc((s1_len + s2_len + 1) * sizeof(char));
+	if (!join)
+		return (NULL);
+	ft_strlcpy_gnl(join, s1, s1_len + 1);
+	ft_strlcpy_gnl((join + s1_len), s2, s2_len + 1);
+	free(s1);
+	return (join);
+}
+
+void	set_new_buf(char *buf, char *line, char *newline)
+{
+	int	to_copy;
+
+	if (newline != NULL)
+	{
+		to_copy = newline - line + 1;
+		ft_strlcpy_gnl(buf, newline + 1, BUFFER_SIZE + 1);
+	}
+	else
+	{
+		to_copy = ft_strlen(line);
+		ft_strlcpy_gnl(buf, "", BUFFER_SIZE + 1);
+	}
+	line[to_copy] = '\0';
 }
 
 /**
@@ -98,21 +92,26 @@ void	clean_list(t_gnl **list)
  */
 char	*get_next_line(int fd)
 {
-	static t_gnl	*list;
-	char			*str;
-	int				len_str;
-	int				flag;
+	static char	buf[BUFFER_SIZE + 1];
+	char		*line;
+	char		*newline;
+	int			countread;
 
-	if (fd < 0 || read(fd, &str, 0) < 0 || BUFFER_SIZE < 1)
-		return (ft_lstclear_gnl(&list, free), NULL);
-	flag = init_list(&list, fd);
-	if (list == NULL || flag == 1)
-		return (ft_lstclear_gnl(&list, free), NULL);
-	len_str = count_chars(list);
-	str = malloc(len_str + 1);
-	if (!str)
-		return (ft_lstclear_gnl(&list, free), NULL);
-	my_strcpy(str, list);
-	clean_list(&list);
-	return (str);
+	line = ft_strdup_gnl(buf);
+	while (!ft_strchr(line, '\n'))
+	{
+		countread = read(fd, buf, BUFFER_SIZE);
+		if (countread > 0)
+		{
+			buf[countread] = '\0';
+			line = ft_strjoin_gnl(line, buf, countread);
+		}
+		else
+			break ;
+	}
+	if (ft_strlen(line) == 0)
+		return (free(line), NULL);
+	newline = ft_strchr(line, '\n');
+	set_new_buf(buf, line, newline);
+	return (line);
 }
