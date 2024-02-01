@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 12:51:16 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:10:54 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:40:33 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_putchar` writes a single character to the standard output.

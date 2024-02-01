@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 13:04:08 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:11:24 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:41:26 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The ft_putstr function takes a string as input and prints it to the

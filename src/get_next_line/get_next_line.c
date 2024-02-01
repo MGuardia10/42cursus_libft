@@ -6,13 +6,13 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/13 14:50:39 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/14 16:25:29 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 16:12:39 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../inc/get_next_line.h"
 
-size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
+static size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
 {
 	size_t	srcsize;
 	size_t	i;
@@ -31,7 +31,7 @@ size_t	ft_strlcpy_gnl(char *dst, const char *src, size_t dstsize)
 	return (srcsize);
 }
 
-char	*ft_strdup_gnl(const char *src)
+static char	*ft_strdup_gnl(const char *src)
 {
 	char	*dst;
 	size_t	len;
@@ -44,7 +44,7 @@ char	*ft_strdup_gnl(const char *src)
 	return (dst);
 }
 
-char	*ft_strjoin_gnl(char *s1, char const *s2, size_t len)
+static char	*ft_strjoin_gnl(char *s1, char const *s2, size_t len)
 {
 	size_t	s1_len;
 	size_t	s2_len;
@@ -63,7 +63,7 @@ char	*ft_strjoin_gnl(char *s1, char const *s2, size_t len)
 	return (join);
 }
 
-void	set_new_buf(char *buf, char *line, char *newline)
+static void	set_new_buf(char *buf, char *line, char *newline)
 {
 	int	to_copy;
 

@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/03 18:01:40 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:08:35 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:22:34 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_custom_error` prints an error message to the standard error
@@ -21,7 +21,7 @@
  */
 void	ft_custom_error(char *error)
 {
-	write(STDERR, "Error: ", 7);
-	ft_putstr_fd(error, STDERR);
+	write(STDERR_FILENO, "Error: ", 7);
+	ft_putstr_fd(error, STDERR_FILENO);
 	exit(EXIT_FAILURE);
 }

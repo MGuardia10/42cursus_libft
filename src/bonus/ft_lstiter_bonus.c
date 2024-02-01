@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 14:38:06 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:22:55 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:49:02 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../inc/libft.h"
 
 /**
  * The function `ft_lstiter` iterates through a linked list and applies a given

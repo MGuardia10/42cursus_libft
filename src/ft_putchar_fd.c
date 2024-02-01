@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:47:41 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:10:47 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:40:27 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function ft_putchar_fd writes a single character to a specified

@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 19:29:24 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:13:40 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:42:32 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function ft_toupper converts a lowercase letter to uppercase.

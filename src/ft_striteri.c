@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:41:10 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:11:59 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:41:51 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_striteri` iterates through a string and applies a given

@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/19 12:40:46 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:22:49 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:48:57 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../inc/libft.h"
 
 /**
  * The function `ft_lstdelone` deletes a single node from a linked list and

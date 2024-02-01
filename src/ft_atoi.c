@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/12 20:50:41 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:08:00 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:21:41 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 static int	is_space(char c)
 {

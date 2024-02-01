@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 19:13:59 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:09:53 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:40:03 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_memcmp` compares two blocks of memory and returns the

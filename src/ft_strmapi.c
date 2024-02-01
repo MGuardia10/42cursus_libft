@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 16:26:43 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:12:47 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:42:16 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_strmapi` takes a string `s` and applies a function `f` to

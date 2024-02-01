@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/15 15:04:16 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:12:20 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:41:55 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_strjoin` concatenates two strings `s1` and `s2` and returns

@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:23:36 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/12 17:19:25 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:17:56 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../inc/ft_printf.h"
 
 static void	format_printf(char c, va_list ap, int *count)
 {

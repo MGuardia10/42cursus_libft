@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/13 14:47:06 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:12:53 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:42:26 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_strncmp` compares two strings up to a specified length and

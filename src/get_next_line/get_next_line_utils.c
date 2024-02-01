@@ -1,22 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   mouse_keycodes.h                                   :+:      :+:    :+:   */
+/*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/02/01 09:36:56 by mguardia          #+#    #+#             */
-/*   Updated: 2024/02/01 09:36:58 by mguardia         ###   ########.fr       */
+/*   Created: 2024/02/01 16:11:44 by mguardia          #+#    #+#             */
+/*   Updated: 2024/02/01 16:14:01 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MOUSE_KEYCODES_H
-# define MOUSE_KEYCODES_H
+#include "../../inc/get_next_line.h"
 
-# define LEFT_CLICK		1
-# define RIGHT_CLICK	2
-# define MIDDLE_CLICK	3
-# define SCROLL_UP		4
-# define SCROLL_DOWN	5
+char	*ft_strchr(const char *s, int c)
+{
+	char	letter;
 
-#endif
+	letter = (char) c;
+	while (*s)
+	{
+		if (*s == letter)
+			return ((char *) s);
+		s++;
+	}
+	if (letter == '\0')
+		return ((char *) s);
+	return (NULL);
+}
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i])
+		i++;
+	return (i);
+}

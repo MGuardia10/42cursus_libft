@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/23 14:44:07 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:08:56 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:23:23 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function "check_format" compares the last characters of two strings and
@@ -22,7 +22,7 @@
  * 
  * @return either 0 (the extension is incorrect) or 1 (the extension is correct).
  */
-t_bool	ft_is_format(char *str, char *format)
+bool	ft_is_format(char *str, char *format)
 {
 	int	len_str;
 	int	len_format;

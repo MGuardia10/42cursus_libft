@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/12 15:25:58 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/12 17:14:08 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:20:50 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../../inc/ft_printf.h"
 
 void	ft_putchar_c(char c, int *count)
 {

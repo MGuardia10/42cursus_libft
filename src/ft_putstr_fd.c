@@ -6,11 +6,11 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 15:47:44 by mguardia          #+#    #+#             */
-/*   Updated: 2023/12/10 10:11:18 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 15:41:21 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../inc/libft.h"
 
 /**
  * The function `ft_putstr_fd` writes a string to a file descriptor.
