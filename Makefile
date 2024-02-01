@@ -54,7 +54,7 @@ SRC_FILES	=	ft_isalpha.c \
 SRC			= $(addprefix $(SRC_DIR), $(SRC_FILES))
 
 # BONUS FILES
-BONUS_DIR	=	bonus/
+BONUS_DIR	=	src/bonus/
 BONUS_FILES = 	ft_lstnew_bonus.c \
 				ft_lstadd_front_bonus.c \
 				ft_lstsize_bonus.c \
