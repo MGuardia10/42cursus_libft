@@ -101,6 +101,12 @@ $(NAME):	$(OBJS) $(OBJS_GNL) $(OBJS_PRINTF)
 bonus:		$(OBJS_BONUS)
 			ar -rcs $(NAME) $(OBJS_BONUS)
 
+gnl:		$(OBJS_GNL)
+			ar -rcs $(NAME) $(OBJS_GNL)
+
+printf:		$(OBJS_PRINTF)
+			ar -rcs $(NAME) $(OBJS_PRINTF)
+
 # -p: se utiliza para crear un directorio junto con sus directorios padres, en
 # nuestro caso lo utilizamos para crear por primera vez el directorio objs/ y
 # que no nos salte el error de que ya existe una vez ya se ha creado.
