@@ -95,7 +95,7 @@ all:		$(NAME)
 # ar: "archiver" -> agrupa varios archivos objeto en un archivo de libreria
 # r: indica a "ar" que debe reemplazar o agregar archivos a la libreria
 # c: indica que debe crear la libreria si no existe
-$(NAME):	$(OBJS) $(OBJS_GNL) $(OBJS_PRINTF)
+$(NAME):	$(OBJS) gnl printf
 			ar -rcs $(NAME) $(OBJS)
 
 bonus:		$(OBJS_BONUS)

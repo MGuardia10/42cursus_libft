@@ -6,7 +6,7 @@
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 11:55:30 by mguardia          #+#    #+#             */
-/*   Updated: 2024/02/01 15:52:27 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/02/01 17:41:59 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@
 # include <limits.h>
 # include <signal.h>
 # include <stdbool.h>
-# include "../inc/ft_printf.h"
-# include "../inc/get_next_line.h"
+# include "ft_printf.h"
+# include "get_next_line.h"
 
 /*
 * LIBFT - OBLIGATORY FUNCTIONS
