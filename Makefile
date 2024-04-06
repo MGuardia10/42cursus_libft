@@ -13,7 +13,7 @@ INCLUDE 		=	-I inc
 ################################################################################
 
 # VPATH
-VPATH		=	src:src/bonus:src/ft_fprintf:src/ft_printf:src/get_next_line
+VPATH		=	src:src/bonus:src/ft_dprintf:src/ft_printf:src/get_next_line
 
 # SRC
 SRC		=	ft_isalpha.c \
@@ -82,8 +82,8 @@ GNL		=	get_next_line.c \
 			get_next_line_utils.c
 
 # FPRINTF
-FPRINTF	=	ft_fprintf.c \
-			ft_fprintf_utils.c
+DPRINTF	=	ft_dprintf.c \
+			ft_dprintf_utils.c
 
 # PRINTF
 PRINTF	=	ft_printf.c \
@@ -93,7 +93,7 @@ PRINTF	=	ft_printf.c \
 OBJS_DIR		=	objs/
 OBJ_FILES		=	$(SRC:%.c=$(OBJS_DIR)%.o) \
 					$(BONUS:%.c=$(OBJS_DIR)%.o) \
-					$(FPRINTF:%.c=$(OBJS_DIR)%.o) \
+					$(DPRINTF:%.c=$(OBJS_DIR)%.o) \
 					$(PRINTF:%.c=$(OBJS_DIR)%.o) \
 					$(GNL:%.c=$(OBJS_DIR)%.o)
 

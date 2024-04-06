@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fprintf.c                                       :+:      :+:    :+:   */
+/*   ft_dprintf.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mguardia <mguardia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 11:23:36 by mguardia          #+#    #+#             */
-/*   Updated: 2024/03/04 17:34:17 by mguardia         ###   ########.fr       */
+/*   Updated: 2024/04/06 20:35:00 by mguardia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../inc/ft_fprintf.h"
+#include "../../inc/ft_dprintf.h"
 
 static void	format_printf(char c, va_list ap, int *nums)
 {
@@ -52,7 +52,7 @@ static void	format_printf(char c, va_list ap, int *nums)
  * @return The function `ft_fprintf` is returning the total number of characters
  * written to the file descriptor `fd`.
  */
-int	ft_fprintf(int fd, char const *str, ...)
+int	ft_dprintf(int fd, char const *str, ...)
 {
 	va_list	ap;
 	int		nums[2];
