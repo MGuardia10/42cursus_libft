@@ -2,6 +2,7 @@
 The libft project consists of creating your own first library by reproducing already existing functions. You can use libft on other 42 projects as long as it is allowed, so it will be updated frequently.
 
 ![C](https://img.shields.io/badge/C-a?style=for-the-badge&logo=C&color=grey)
+![Makefile](https://img.shields.io/badge/Makefile-a?style=for-the-badge&logo=monster&logoColor=orange&color=grey)
 
 You can see the subject [**HERE**](https://github.com/MGuardia10/42cursus/blob/main/subjects/en/libft_subject_en.pdf)
 
